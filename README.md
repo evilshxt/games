@@ -188,6 +188,62 @@ Here's a high-level view of how the system works, designed for clarity and modul
 - **GameCard**: Individual game previews with thumbnails
 - **GamePlayer**: Handles mounting, pausing, and unmounting games
 
+### Project Structure
+
+```
+src/
+├── components/              # Shared UI components
+│   ├── GameHub.tsx         # Main landing page
+│   └── GameCard.tsx        # Individual game cards
+├── games/                  # Game-specific code
+│   └── cosmic-drift/       # Cosmic Drift game
+│       ├── index.tsx       # Game info/preview page
+│       └── game.tsx        # Main game implementation
+└── App.tsx                 # Main app with routing
+```
+
+### Navigation Flow
+
+```
+Game Hub (/)
+    ↓ (click game card)
+Game Info Page (/games/{game-id})
+    ↓ (Continue to Game)
+Game Implementation (/games/{game-id}/play)
+```
+
+### Development Roadmap
+
+#### ✅ **Phase 1: Foundation** (Completed)
+- [x] Project setup with Vite + React + TypeScript
+- [x] Tailwind CSS for styling
+- [x] React Router for navigation
+- [x] Game hub landing page
+- [x] Basic routing structure
+- [x] Cosmic Drift placeholder pages
+
+#### 🚧 **Phase 2: Cosmic Drift 3D Game** (In Progress)
+- [ ] Implement React Three Fiber scene
+- [ ] Create procedural wormhole geometry
+- [ ] Add player controller with physics
+- [ ] Implement obstacle spawning system
+- [ ] Add power-up collection mechanics
+- [ ] Integrate particle effects and post-processing
+- [ ] Add sound effects and background music
+- [ ] Implement scoring and high-score system
+
+#### 📋 **Phase 3: Additional Games**
+- [ ] Game 2: [TBD]
+- [ ] Game 3: [TBD]
+- [ ] Game 4: [TBD]
+
+#### 🎯 **Phase 4: Polish & Features**
+- [ ] User accounts and leaderboards
+- [ ] Social sharing features
+- [ ] Mobile responsiveness optimization
+- [ ] Performance optimizations
+- [ ] Accessibility improvements
+
 ---
 
 ## 🤝 Contributing
