@@ -136,7 +136,9 @@ function PowerUp({ position, type, onCollect }: { position: [number, number, num
 function Obstacle({ position, type }: { position: [number, number, number], type: 'ring' | 'spike' | 'crystal' }) {
   const rigidBodyRef = useRef<RapierRigidBody>(null)
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   useFrame((state, delta) => {
+    void state;
     if (rigidBodyRef.current) {
       // Update position to move with the game
       const currentPos = rigidBodyRef.current.translation()
@@ -189,7 +191,9 @@ function Wormhole() {
     new THREE.Vector3(0, 0, -40),
   ])
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   useFrame((state, delta) => {
+    void state;
     if (tubeRef.current) {
       // Animate the wormhole (optional)
       tubeRef.current.rotation.z += delta * 0.1
@@ -235,7 +239,9 @@ const GameScene = memo(function GameScene({ isPlaying }: { isPlaying: boolean })
   }, [])
 
   // Forward movement and obstacle/power-up management
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   useFrame((state, delta) => {
+    void state;
     if (isPlaying) {
       // Progressive difficulty: increase speed over time
       const baseSpeed = 5
